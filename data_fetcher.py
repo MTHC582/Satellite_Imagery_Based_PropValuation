@@ -109,11 +109,11 @@ def process_excel(file_path):
 
 if __name__ == "__main__":
 
-    # List of files to process (Train AND Test) # <<< MODIFIED
+    # List of files to process (Train AND Test)
     files_list = ["data/train(1).xlsx", "data/test2.xlsx"]
 
     # Changed from main to this so that both test n train data-sets can be done in one single stretch
-    # Loop through the list and run the process for each # <<< MODIFIED
+    # Loop through the list and run the process for each
     for file_name in files_list:
         process_excel(file_name)
 
