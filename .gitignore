@@ -1,0 +1,14 @@
+# avoiding those huge .xlsx and data images
+data/
+
+# avoiding the trained model .pth path files
+checkpoints/
+
+# API key - Secure
+.env
+
+# python internals
+__pycache__/
+
+# virtual envi for python 
+venv/
