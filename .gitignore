@@ -2,7 +2,7 @@
 data/
 
 # avoiding the trained model .pth path files
-checkpoints/
+checkpoints/ 
 
 # API key - Secure
 .env
