@@ -1,5 +1,5 @@
 # avoiding those huge .xlsx and data images
-data/
+data/images/
 
 # avoiding the trained model .pth path files
 checkpoints/ 
