@@ -91,7 +91,15 @@ class SatelliteDataset(Dataset):
 
         # 3_Load Numerical Features (Tabular Input)
         # We perform fillna(0) here (just in case), though preprocessing is made for that too!..
-        features_data = row[self.feature_cols].fillna(0).values.astype(np.float32)
+        # features_data = row[self.feature_cols].fillna(0).values.astype(np.float32)
+        # Not using the above commented one to just prevent the warnings (harmless) during the run
+        features_data = (
+            row[self.feature_cols]
+            .fillna(0)
+            .infer_objects(copy=False)
+            .to_numpy(dtype=np.float32)
+        )
+
         features = torch.tensor(features_data, dtype=torch.float32)
 
         # 4_Load Target (Price) - Only if NOT in test mode
