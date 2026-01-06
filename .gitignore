@@ -13,3 +13,6 @@ __pycache__/
 
 # virtual envi for python 
 venv/
+
+# models foler
+models/
