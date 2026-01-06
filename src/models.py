@@ -97,5 +97,5 @@ if __name__ == "__main__":
         print(f"Sample Prediction: ${output[0].item():,.2f}")
 
         print("\nSUCCESS: The Model is built and processing data!")
-    except Exception as e:
-        print(f"\nERROR: {e}")
+    except Exception as ex:
+        print(f"\nERROR: {ex}")
