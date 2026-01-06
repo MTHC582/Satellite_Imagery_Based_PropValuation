@@ -93,10 +93,11 @@ class SatelliteDataset(Dataset):
         # We perform fillna(0) here (just in case), though preprocessing is made for that too!..
         # features_data = row[self.feature_cols].fillna(0).values.astype(np.float32)
         # Not using the above commented one to just prevent the warnings (harmless) during the run
+        # doesnt interrupt the loading bars during trainin progress in output window
         features_data = (
             row[self.feature_cols]
-            .fillna(0)
             .infer_objects(copy=False)
+            .fillna(0)
             .to_numpy(dtype=np.float32)
         )
 
