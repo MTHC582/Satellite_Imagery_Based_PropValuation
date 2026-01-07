@@ -6,7 +6,7 @@ from PIL import Image
 import pandas as pd
 import numpy as np
 
-# Custom made classes-lib
+# This is a Custom made classes-lib
 """
     Custom Dataset to handle paired Data:
     1| Numerical Features (from Excel)
@@ -103,16 +103,12 @@ class SatelliteDataset(Dataset):
 
         features = torch.tensor(features_data, dtype=torch.float32)
 
-        # 4_Load Target (Price) - Only if NOT in test mode
+        # 4_Load Target (Price)
         if not self.is_test:
-            target = torch.tensor(
-                row["price"], dtype=torch.float32
-            )  # Although defaults to float32.
-            # Since GPU works eff in float32, hence needed to make sure/
-            return image, features, target
+            col_to_fetch = self.target_col if self.target_col is not None else "price"
 
-        # For prediction (no target available)
-        return image, features
+            target = torch.tensor(row[col_to_fetch], dtype=torch.float32)
+            return image, features, target
 
 
 """
