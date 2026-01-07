@@ -44,6 +44,8 @@ Once you implement the project correctly, the folder structure should look like:
 └── README.md                  # Project documentation
 ```
 
+#### Note: Final project report and other details are in `reports/`
+
 ---
 
 ## 3. Installation & Setup Guide
