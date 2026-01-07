@@ -209,3 +209,5 @@ The architecture consists of two parallel branches:
 - Satellite imagery captures environmental context
 - Log-scaled targets stabilize neural network training
 - Grad-CAM provides visual explainability
+
+## NOTE : All code blocks and files are idempotent
